@@ -47,19 +47,27 @@
                 </tr>
                 <tr>
                     <td class="font3 fftd">R25</td>
-                    <td class="font3 fftd">${part.r25}</td>
+                    <td class="font3 fftd">
+                        <f:formatNumber value="${part.r25}" type="number"
+                                        pattern="######.0000"/></td>
                 </tr>
                 <tr>
                     <td class="font3 fftd">R16</td>
-                    <td class="font3 fftd">${part.r16}</td>
+                    <td class="font3 fftd">
+                        <f:formatNumber value="${part.r16}" type="number"
+                                        pattern="######.0000"/></td>
                 </tr>
                 <tr>
                     <td class="font3 fftd">Rntc</td>
-                    <td class="font3 fftd">${part.rntc}</td>
+                    <td class="font3 fftd">
+                        <f:formatNumber value="${part.rntc}" type="number"
+                                        pattern="######.0000"/></td></td>
                 </tr>
                 <tr>
                     <td class="font3 fftd">Tntc</td>
-                    <td class="font3 fftd">${part.tntc}</td>
+                    <td class="font3 fftd">
+                        <f:formatNumber value="${part.tntc}" type="number"
+                                        pattern="######.0000"/></td></td></td>
                 </tr>
                 <tr>
                     <td class="font3 fftd">点胶图片</td>

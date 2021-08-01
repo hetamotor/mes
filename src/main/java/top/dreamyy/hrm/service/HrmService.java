@@ -65,7 +65,7 @@ public interface HrmService {
      * 获得所有部门，分页查询
      */
     List<TestResult> findDept(Dept dept, PageModel pageModel);
-    List<TestResult> findDept(String qrcode, String shuntsensor);
+    List<TestResult> findDept(String qrcode, String shuntsensor, PageModel pageModel);
 
     /**
      * 获得所有部门

@@ -96,18 +96,20 @@
         </tr>
         <tr valign="top" id="submenu4">
             <td class="left_nav_bgshw" height="50">
-                <c:if test="${2 <= sessionScope.user_session.userrole}">
-                <p class="left_nav_link"><img src="${ctx}/images/left_nav_arrow.gif"/>&nbsp;&nbsp;<a
-                        href="${ctx }/dept/addDept?flag=1" target="main">零件查询</a></p>
+                <c:if test="${0 < sessionScope.user_session.estatus}">
+                    <c:if test="${2 <= sessionScope.user_session.userrole}">
+                        <p class="left_nav_link"><img src="${ctx}/images/left_nav_arrow.gif"/>&nbsp;&nbsp;<a
+                                href="${ctx }/dept/addDept?flag=1" target="main">零件查询</a></p>
+                    </c:if>
+                    <p class="left_nav_link"><img src="${ctx}/images/left_nav_arrow.gif"/>&nbsp;&nbsp;<a
+                            href="${ctx }/notice/selectNotice" target="main">投料查询</a></p>
+                    <c:if test="${2 != sessionScope.user_session.userrole}">
+                        <p class="left_nav_link"><img src="${ctx}/images/left_nav_arrow.gif"/>&nbsp;&nbsp;<a
+                                href="${ctx }/notice/addNotice?flag=1" target="main">投料登记</a></p>
+                    </c:if>
+                    <!--p class="left_nav_link"><img src="${ctx}/images/left_nav_arrow.gif"/>&nbsp;&nbsp;<a
+                    href="${ctx }/productList.jsp" target="main">零件清单</a></p-->
                 </c:if>
-                <p class="left_nav_link"><img src="${ctx}/images/left_nav_arrow.gif"/>&nbsp;&nbsp;<a
-                        href="${ctx }/notice/selectNotice" target="main">投料查询</a></p>
-                <c:if test="${2 != sessionScope.user_session.userrole}">
-                <p class="left_nav_link"><img src="${ctx}/images/left_nav_arrow.gif"/>&nbsp;&nbsp;<a
-                        href="${ctx }/notice/addNotice?flag=1" target="main">投料登记</a></p>
-                </c:if>
-                <!--p class="left_nav_link"><img src="${ctx}/images/left_nav_arrow.gif"/>&nbsp;&nbsp;<a
-                        href="${ctx }/productList.jsp" target="main">零件清单</a></p-->
             </td>
         </tr>
         <tr>

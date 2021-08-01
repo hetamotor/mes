@@ -115,16 +115,16 @@ public class HrmServiceImpl implements HrmService {
     /** HrmServiceImpl接口findDept方法实现 */
     @Transactional(readOnly = true)
     @Override
-    public List<TestResult> findDept(String qrcode, String shuntsensor) {
+    public List<TestResult> findDept(String qrcode, String shuntsensor, PageModel pageModel) {
         Map<String, Object> params = new HashMap<>(); // 当前需要分页的总数据条数
         params.put("qrcode", qrcode);
         params.put("shuntsensor", shuntsensor);
 
-        /* int recordCount = deptDao.count(params);
+        int recordCount = partDao.count(params);
         pageModel.setRecordCount(recordCount);
         if (recordCount > 0) {
             params.put("pageModel", pageModel); // 开始分页查询数据：查询第几页的数据
-        } */
+        }
         System.out.println("param qrcode = " + qrcode);
         System.out.println("param shuntsensor = " + shuntsensor);
         List<TestResult> testresults = partDao.selectByPage(params);

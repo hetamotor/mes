@@ -42,7 +42,7 @@ public class DeptController {
             pageModel.setPageIndex(pageIndex);
         }
 
-        List<TestResult> parts = hrmService.findDept(qrcode, shuntsensor);  // 查询用户信息
+        List<TestResult> parts = hrmService.findDept(qrcode, shuntsensor, pageModel);  // 查询用户信息
         System.out.println("准备显示：" + parts.size());
 
         model.addAttribute("parts", parts);
